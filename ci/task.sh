@@ -5,6 +5,11 @@ gradle generateCucumberReport
 cp -r build/reports/cucumber/cucumber-html-reports/* ../cucumber-report-html
 cd ../cucumber-report-html || exit
 touch Staticfile
+cat << _EOF_ > manifest.yml
+---
+applications:
+- name: ${APP_NAME}
+_EOF_
 cat << _EOF_ > index.html
 <!doctype html>
 <html>
