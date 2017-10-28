@@ -2,8 +2,8 @@
 
 cd cucumber-tests || exit
 gradle generateCucumberReport
-cp -r build/reports/cucumber/cucumber-html-reports/* ../cucumber-report
-cd ../cucumber-report || exit
+cp -r build/reports/cucumber/cucumber-html-reports/* ../cucumber-report-html
+cd ../cucumber-report-html || exit
 touch Staticfile
 cat << _EOF_ > index.html
 <!doctype html>
